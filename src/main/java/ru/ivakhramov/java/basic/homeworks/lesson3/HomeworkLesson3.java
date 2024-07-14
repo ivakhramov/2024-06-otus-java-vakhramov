@@ -22,7 +22,7 @@ public class HomeworkLesson3 {
         } else {
             System.out.println("Ваш ввод не соответствует условию. Перезапустите программу Alt+Shift+F10");
         }
-        System.out.println(usersChoice);
+        // System.out.println(usersChoice); // Вывод в консоль для проверки
 
         Random random = new Random();
         if (usersChoice == 1) {
