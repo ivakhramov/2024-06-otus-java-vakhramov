@@ -70,7 +70,7 @@ public class HomeworkLesson5 {
     public static void printStringNTimes(int n, String str) {
 
         for (int i = 0; i < n; i++) {
-            System.out.println(str); // Предполагаю, что строку с переносом каретки. В любом случае, смысл задачи не меняется
+            System.out.println(str);
         }
     }
 

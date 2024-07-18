@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6df17b42-cf69-429e-9ec2-77af3dc7fc81" name="Changes" comment="Фикс - изменил &lt;groupId&gt; в pom.xml">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson5/HomeworkLesson5.java" afterDir="false" />
+    <list default="true" id="6df17b42-cf69-429e-9ec2-77af3dc7fc81" name="Changes" comment="Домашняя работа к уроку 5 готова (включая задание *)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson5/HomeworkLesson5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson5/HomeworkLesson5.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,17 +37,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.GreetingsApplication.executor": "Run",
-    "Application.HomeworkLesson3.executor": "Run",
-    "Application.HomeworkLesson5.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/ivan/IdeaProjects/otus_java_basic_homeworks",
-    "settings.editor.selected.configurable": "proofread"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.GreetingsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HomeworkLesson3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HomeworkLesson5.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ivan/IdeaProjects/otus_java_basic_homeworks&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;proofread&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.HomeworkLesson5">
     <configuration name="GreetingsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.ivakhramov.java.basic.homeworks.GreetingsApplication" />
@@ -131,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721156781706</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Домашняя работа к уроку 5 готова (включая задание *)">
+      <option name="closed" value="true" />
+      <created>1721329171530</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721329171530</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,6 +163,7 @@
     <MESSAGE value="Домашняя работа к уроку 3 готова (включая задание *)" />
     <MESSAGE value="Фикс - закомментировал строку вывода в консоль, использавовшуюся для проверки" />
     <MESSAGE value="Фикс - изменил &lt;groupId&gt; в pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Фикс - изменил &lt;groupId&gt; в pom.xml" />
+    <MESSAGE value="Домашняя работа к уроку 5 готова (включая задание *)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Домашняя работа к уроку 5 готова (включая задание *)" />
   </component>
 </project>
