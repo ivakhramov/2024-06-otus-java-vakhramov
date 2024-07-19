@@ -38,16 +38,26 @@ public class HomeworkLesson5 {
         sumMultipleArrays(testArray61, testArray62, testArray63); // {4, 5, 4, 1, 1}
 
         // * 7. Метод, проверяющий, что есть “точка” в массиве, в которой суммы левой и правой части равны
-        int[] testArray71 = {1, 1, 1, 1, 1, 5};
-        int[] testArray72 = {5, 3, 4, -2};
-        int[] testArray73 = {7, 2, 2, 2};
-        int[] testArray74 = {9, 4};
-        int[] testArray75 = {2, 2, 2, 2, 2, 2};
-        hasBalancePoint(testArray71); // { 1, 1, 1, 1, 1, | 5 }
-        hasBalancePoint(testArray72); // { 5, | 3, 4, -2 }
-        hasBalancePoint(testArray73); // нет точки баланса
-        hasBalancePoint(testArray74); // нет точки баланса
-        hasBalancePoint(testArray75); // { 2, 2, 2, | 2, 2, 2 }
+        int[] testArray70positive = {1, 1, 1, 1, 1, 5};
+        int[] testArray71positive = {5, 3, 4, -2};
+        int[] testArray72positive = {7, 2, 2, 2};
+        int[] testArray73positive = {9, 4};
+        int[] testArray74positive = {2, 2, 2, 2, 2, 2};
+        int[] testArray75negative = {-1, -1, -1, -1, -1, -5};
+        int[] testArray76negative = {-5, -3, -4, 2};
+        int[] testArray77negative = {-7, -2, -2, -2};
+        int[] testArray78negative = {-9, -4};
+        int[] testArray79negative = {-2, -2, -2, -2, -2, -2};
+        hasBalancePoint(testArray70positive); // { 1, 1, 1, 1, 1, | 5 }
+        hasBalancePoint(testArray71positive); // { 5, | 3, 4, -2 }
+        hasBalancePoint(testArray72positive); // нет точки баланса
+        hasBalancePoint(testArray73positive); // нет точки баланса
+        hasBalancePoint(testArray74positive); // { 2, 2, 2, | 2, 2, 2 }
+        hasBalancePoint(testArray75negative); // { -1, -1, -1, -1, -1, | -5 }
+        hasBalancePoint(testArray76negative); // { -5, | -3, -4, 2 }
+        hasBalancePoint(testArray77negative); // нет точки баланса
+        hasBalancePoint(testArray78negative); // нет точки баланса
+        hasBalancePoint(testArray79negative); // { -2, -2, -2, | -2, -2, -2 }
 
         // * 8. Метод, проверяющий, что все элементы массива идут в порядке убывания или возрастания
         int[] testArray81Increasing = {-7, -2, 0, 5, 7, 17};
@@ -55,14 +65,22 @@ public class HomeworkLesson5 {
         int[] testArray83Chaotic = {-7, -2, 0, 5, 3, 17};
         int[] testArray84Chaotic = {17, 7, 5, 0, 3, -7};
         int[] testArray85Same = {2, 2, 2, 2, 2, 2};
-        hasArraySorted(testArray81Increasing); // возрастающий
-        hasArraySorted(testArray82Decreasing); // убывающий
-        hasArraySorted(testArray83Chaotic);    // хаотичный
-        hasArraySorted(testArray84Chaotic);    // хаотичный
-        hasArraySorted(testArray85Same);       // ровный
+        int usersChoiceDecreasing = 1;
+        int usersChoiceIncreasing = 2;
+        hasArraySorted(testArray81Increasing, usersChoiceDecreasing); // возрастающий
+        hasArraySorted(testArray82Decreasing, usersChoiceDecreasing); // убывающий
+        hasArraySorted(testArray83Chaotic, usersChoiceDecreasing);    // хаотичный
+        hasArraySorted(testArray84Chaotic, usersChoiceDecreasing);    // хаотичный
+        hasArraySorted(testArray85Same, usersChoiceDecreasing);       // ровный
+        hasArraySorted(testArray81Increasing, usersChoiceIncreasing); // возрастающий
+        hasArraySorted(testArray82Decreasing, usersChoiceIncreasing); // убывающий
+        hasArraySorted(testArray83Chaotic, usersChoiceIncreasing);    // хаотичный
+        hasArraySorted(testArray84Chaotic, usersChoiceIncreasing);    // хаотичный
+        hasArraySorted(testArray85Same, usersChoiceIncreasing);       // ровный
 
         // * 9. Метод, “переворачивающий” входящий массив
-        reverseArray(new int[]{1, 2, 3, 4}); // {4, 3, 2, 1}
+        reverseArray(new int[]{1, 2, 3, 4});    // {4, 3, 2, 1}
+        reverseArray(new int[]{1, 2, 3, 4, 5}); // {5, 4, 3, 2, 1}
     }
 
     // 1. Реализуйте метод, принимающий в качестве аргументов целое число и строку,
@@ -84,6 +102,7 @@ public class HomeworkLesson5 {
                 sumElementsArrayGreaterFive += arr[i];
             }
         }
+
         if (sumElementsArrayGreaterFive > 5) {
             System.out.println(sumElementsArrayGreaterFive);
         } else {
@@ -115,22 +134,24 @@ public class HomeworkLesson5 {
     // и печатающий в консоль информацию о том, сумма элементов какой из половин массива больше
     public static void sumLargerHalfArray(int[] arr) {
 
+        if (arr.length % 2 != 0) {
+            System.out.println("Массив имеет нечетное количество элементов. Сравнить правую и левую часть не возможно");
+            return;
+        }
+
         int sumLeftHalfArray = 0;
         int sumRightHalfArray = 0;
-        if (arr.length % 2 == 0) {
-            for (int i = 0; i < (arr.length / 2); i++) {
-                sumLeftHalfArray += arr[i];
-                sumRightHalfArray += arr[(arr.length - 1) - i];
-            }
-            if (sumLeftHalfArray > sumRightHalfArray) {
-                System.out.println("Сумма элементов левой части массива больше суммы элементов правой части массива");
-            } else if (sumLeftHalfArray < sumRightHalfArray) {
-                System.out.println("Сумма элементов правой части массива больше суммы элементов левой части массива");
-            } else {
-                System.out.println("Суммы элементов правой и левой частей массивов равны");
-            }
+        for (int i = 0; i < (arr.length / 2); i++) {
+            sumLeftHalfArray += arr[i];
+            sumRightHalfArray += arr[(arr.length - 1) - i];
+        }
+
+        if (sumLeftHalfArray > sumRightHalfArray) {
+            System.out.println("Сумма элементов левой части массива больше суммы элементов правой части массива");
+        } else if (sumLeftHalfArray < sumRightHalfArray) {
+            System.out.println("Сумма элементов правой части массива больше суммы элементов левой части массива");
         } else {
-            System.out.println("Массив имеет нечетное количество элементов. Сравнить правую и левую часть не возможно");
+            System.out.println("Суммы элементов правой и левой частей массивов равны");
         }
     }
 
@@ -142,12 +163,20 @@ public class HomeworkLesson5 {
     //       = { 4, 5, 4, 1, 1 }
     public static void sumMultipleArrays(int[]... arrays) {
 
-        for (int i = 0; i < arrays.length - 1; i++) {
-            for (int j = 0; j < arrays[i].length; j++) {
-                arrays[arrays.length - 1][j] += arrays[i][j];
+        int maxLengthArrayFromSet = 0;
+        for (int i = 0; i < arrays.length; i++) {
+            if (maxLengthArrayFromSet < arrays[i].length) {
+                maxLengthArrayFromSet = arrays[i].length;
             }
         }
-        System.out.println(Arrays.toString(arrays[arrays.length - 1]));
+
+        int[] sumMultipleArrays = new int[maxLengthArrayFromSet];
+        for (int i = 0; i < arrays.length; i++) {
+            for (int j = 0; j < arrays[i].length; j++) {
+                sumMultipleArrays[j] += arrays[i][j];
+            }
+        }
+        System.out.println(Arrays.toString(sumMultipleArrays));
     }
 
     // * 7. Реализуйте метод, проверяющий, что есть “точка” в массиве,
@@ -160,34 +189,39 @@ public class HomeworkLesson5 {
             sumArrayElements += arr[i];
         }
 
-        int sumElementsLeftHalfArray = arr[0];
-        int leftIndexBalancePoint = 0;
-        if (sumArrayElements % 2 == 0) {
-            for (int i = 1; i < arr.length; i++) {
-                if (sumElementsLeftHalfArray < sumArrayElements / 2) {
-                    sumElementsLeftHalfArray += arr[i];
-                    leftIndexBalancePoint = i;
-                }
-            }
-            if (sumElementsLeftHalfArray == sumArrayElements / 2) {
-                System.out.println("Точка, в которой суммы левой и правой частей равны, находится между элементами " + arr[leftIndexBalancePoint] + " с индексом [" + leftIndexBalancePoint + "], и " + arr[leftIndexBalancePoint + 1] + " с индексом [" + (leftIndexBalancePoint + 1) + "]");
-            } else {
-                System.out.println("У массива нет точки, в которой суммы левой и правой частей равны");
-            }
-        } else {
+        if (sumArrayElements % 2 != 0) {
             System.out.println("Сумма элементов массива нечетная. У массива нет точки, в которой суммы левой и правой частей равны");
+            return;
+        }
+
+        int sumElementsLeftPartArray = 0;
+        int sumElementsRightPartArray = 0;
+        int leftIndexBalancePoint = -1;
+        for (int i = 0; i < arr.length; i++) {
+            sumElementsLeftPartArray += arr[i];
+            sumElementsRightPartArray = sumArrayElements - sumElementsLeftPartArray;
+            if (sumElementsLeftPartArray == sumElementsRightPartArray) {
+                leftIndexBalancePoint = i;
+                break;
+            }
+        }
+
+        if (leftIndexBalancePoint != -1) {
+            System.out.println("Точка, в которой суммы левой и правой частей равны, находится между элементами " + arr[leftIndexBalancePoint] + " с индексом [" + leftIndexBalancePoint + "], и " + arr[leftIndexBalancePoint + 1] + " с индексом [" + (leftIndexBalancePoint + 1) + "]");
+        } else {
+            System.out.println("У массива нет точки, в которой суммы левой и правой частей равны");
         }
     }
 
     // * 8. Реализуйте метод, проверяющий, что все элементы массива идут в порядке убывания
     // или возрастания (по выбору пользователя)
-    public static void hasArraySorted(int[] arr) {
+    public static void hasArraySorted(int[] arr, int usersChoice) {
 
         boolean hasArraySortedDecreasing = true;
         boolean hasArraySortedIncreasing = true;
-        if (arr[0] > arr[arr.length - 1]) {
+        if (usersChoice == 1) {
             for (int i = 0; i < arr.length - 1; i++) {
-                if (arr[i] < arr[i + 1]) {
+                if (arr[i] <= arr[i + 1]) {
                     hasArraySortedDecreasing = false;
                     break;
                 }
@@ -195,11 +229,11 @@ public class HomeworkLesson5 {
             if (hasArraySortedDecreasing) {
                 System.out.println("Массив убывает");
             } else {
-                System.out.println("Массив не возрастает и не убывает");
+                System.out.println("Массив не убывает");
             }
-        } else if (arr[0] < arr[arr.length - 1]) {
+        } else if (usersChoice == 2) {
             for (int i = 0; i < arr.length - 1; i++) {
-                if (arr[i] > arr[i + 1]) {
+                if (arr[i] >= arr[i + 1]) {
                     hasArraySortedIncreasing = false;
                     break;
                 }
@@ -207,10 +241,8 @@ public class HomeworkLesson5 {
             if (hasArraySortedIncreasing) {
                 System.out.println("Массив возрастает");
             } else {
-                System.out.println("Массив не возрастает и не убывает");
+                System.out.println("Массив не возрастает");
             }
-        } else {
-            System.out.println("Массив не возрастает и не убывает");
         }
     }
 
@@ -218,10 +250,12 @@ public class HomeworkLesson5 {
     // Пример: { 1 2 3 4 } => { 4 3 2 1 }
     public static void reverseArray(int[] arr) {
 
-        int[] resultReverseArray = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            resultReverseArray[arr.length - 1 - i] = arr[i];
+        int tempForElements = 0;
+        for (int i = 0; i < arr.length / 2; i++) {
+            tempForElements = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = tempForElements;
         }
-        System.out.println(Arrays.toString(resultReverseArray));
+        System.out.println(Arrays.toString(arr));
     }
 }
