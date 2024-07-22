@@ -60,23 +60,23 @@ public class HomeworkLesson5 {
         hasBalancePoint(testArray79negative); // { -2, -2, -2, | -2, -2, -2 }
 
         // * 8. Метод, проверяющий, что все элементы массива идут в порядке убывания или возрастания
-        int[] testArray81Increasing = {-7, -2, 0, 5, 7, 17};
-        int[] testArray82Decreasing = {17, 7, 5, 0, -2, -7};
-        int[] testArray83Chaotic = {-7, -2, 0, 5, 3, 17};
-        int[] testArray84Chaotic = {17, 7, 5, 0, 3, -7};
+        int[] testArray81DESC = {17, 7, 5, 0, -2, -7};
+        int[] testArray82ASC = {-7, -2, 0, 5, 7, 17};
+        int[] testArray83Chaotic = {17, 7, 5, 0, 3, -7};
+        int[] testArray84Chaotic = {-7, -2, 0, 5, 3, 17};
         int[] testArray85Same = {2, 2, 2, 2, 2, 2};
-        int usersChoiceDecreasing = 1;
-        int usersChoiceIncreasing = 2;
-        hasArraySorted(testArray81Increasing, usersChoiceDecreasing); // возрастающий
-        hasArraySorted(testArray82Decreasing, usersChoiceDecreasing); // убывающий
-        hasArraySorted(testArray83Chaotic, usersChoiceDecreasing);    // хаотичный
-        hasArraySorted(testArray84Chaotic, usersChoiceDecreasing);    // хаотичный
-        hasArraySorted(testArray85Same, usersChoiceDecreasing);       // ровный
-        hasArraySorted(testArray81Increasing, usersChoiceIncreasing); // возрастающий
-        hasArraySorted(testArray82Decreasing, usersChoiceIncreasing); // убывающий
-        hasArraySorted(testArray83Chaotic, usersChoiceIncreasing);    // хаотичный
-        hasArraySorted(testArray84Chaotic, usersChoiceIncreasing);    // хаотичный
-        hasArraySorted(testArray85Same, usersChoiceIncreasing);       // ровный
+        String usersChoiceASC = "ASC";
+        String usersChoiceDESC = "DESC";
+        hasArraySorted(testArray81DESC, usersChoiceASC);    // убывающий
+        hasArraySorted(testArray82ASC, usersChoiceASC);     // возрастающий
+        hasArraySorted(testArray83Chaotic, usersChoiceASC); // хаотичный
+        hasArraySorted(testArray84Chaotic, usersChoiceASC); // хаотичный
+        hasArraySorted(testArray85Same, usersChoiceASC);    // ровный
+        hasArraySorted(testArray81DESC, usersChoiceDESC);    // убывающий
+        hasArraySorted(testArray82ASC, usersChoiceDESC);     // возрастающий
+        hasArraySorted(testArray83Chaotic, usersChoiceDESC); // хаотичный
+        hasArraySorted(testArray84Chaotic, usersChoiceDESC); // хаотичный
+        hasArraySorted(testArray85Same, usersChoiceDESC);    // ровный
 
         // * 9. Метод, “переворачивающий” входящий массив
         reverseArray(new int[]{1, 2, 3, 4});    // {4, 3, 2, 1}
@@ -184,64 +184,58 @@ public class HomeworkLesson5 {
     //   Пример: { 1, 1, 1, 1, 1, | 5 }, { 5, | 3, 4, -2 }, { 7, 2, 2, 2 }, { 9, 4 }
     public static void hasBalancePoint(int[] arr) {
 
-        int sumArrayElements = 0;
+        int sumElementsRightPartArray = 0;
         for (int i = 0; i < arr.length; i++) {
-            sumArrayElements += arr[i];
+            sumElementsRightPartArray += arr[i];
         }
 
-        if (sumArrayElements % 2 != 0) {
+        if (sumElementsRightPartArray % 2 != 0) {
             System.out.println("Сумма элементов массива нечетная. У массива нет точки, в которой суммы левой и правой частей равны");
             return;
         }
 
         int sumElementsLeftPartArray = 0;
-        int sumElementsRightPartArray = 0;
-        int leftIndexBalancePoint = -1;
         for (int i = 0; i < arr.length; i++) {
             sumElementsLeftPartArray += arr[i];
-            sumElementsRightPartArray = sumArrayElements - sumElementsLeftPartArray;
+            sumElementsRightPartArray -= arr[i];
             if (sumElementsLeftPartArray == sumElementsRightPartArray) {
-                leftIndexBalancePoint = i;
-                break;
+                System.out.println("Точка, в которой суммы левой и правой частей равны, находится между элементами " + arr[i] + " с индексом [" + i + "], и " + arr[i + 1] + " с индексом [" + (i + 1) + "]");
+                return;
             }
         }
 
-        if (leftIndexBalancePoint != -1) {
-            System.out.println("Точка, в которой суммы левой и правой частей равны, находится между элементами " + arr[leftIndexBalancePoint] + " с индексом [" + leftIndexBalancePoint + "], и " + arr[leftIndexBalancePoint + 1] + " с индексом [" + (leftIndexBalancePoint + 1) + "]");
-        } else {
-            System.out.println("У массива нет точки, в которой суммы левой и правой частей равны");
-        }
+        System.out.println("У массива нет точки, в которой суммы левой и правой частей равны");
     }
 
     // * 8. Реализуйте метод, проверяющий, что все элементы массива идут в порядке убывания
     // или возрастания (по выбору пользователя)
-    public static void hasArraySorted(int[] arr, int usersChoice) {
+    public static void hasArraySorted(int[] arr, String usersChoice) {
 
-        boolean hasArraySortedDecreasing = true;
-        boolean hasArraySortedIncreasing = true;
-        if (usersChoice == 1) {
-            for (int i = 0; i < arr.length - 1; i++) {
-                if (arr[i] <= arr[i + 1]) {
-                    hasArraySortedDecreasing = false;
-                    break;
-                }
-            }
-            if (hasArraySortedDecreasing) {
-                System.out.println("Массив убывает");
-            } else {
-                System.out.println("Массив не убывает");
-            }
-        } else if (usersChoice == 2) {
+        boolean hasArraySortedASC = true;
+        boolean hasArraySortedDESC = true;
+        if (usersChoice.equals("ASC")) {
             for (int i = 0; i < arr.length - 1; i++) {
                 if (arr[i] >= arr[i + 1]) {
-                    hasArraySortedIncreasing = false;
+                    hasArraySortedASC = false;
                     break;
                 }
             }
-            if (hasArraySortedIncreasing) {
+            if (hasArraySortedASC) {
                 System.out.println("Массив возрастает");
             } else {
                 System.out.println("Массив не возрастает");
+            }
+        } else if (usersChoice.equals("DESC")) {
+            for (int i = 0; i < arr.length - 1; i++) {
+                if (arr[i] <= arr[i + 1]) {
+                    hasArraySortedDESC = false;
+                    break;
+                }
+            }
+            if (hasArraySortedDESC) {
+                System.out.println("Массив убывает");
+            } else {
+                System.out.println("Массив не убывает");
             }
         }
     }
