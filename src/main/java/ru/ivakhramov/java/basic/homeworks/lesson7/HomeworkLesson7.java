@@ -33,9 +33,11 @@ public class HomeworkLesson7 {
         int[][] testArray51 = {{-5, 5, 0, 1, -1}, {0, -1, 5}, {6, 0}, {8, -1, 2, 0}};
         int[][] testArray52 = {{-5, -5, -111, -12, -17}, {-11, -1, -5}, {-6, -16}, {-8, -3, -2, -7}};
         int[][] testArray53 = {{-5, 5, 0, 1, -1}, {}, {6, 0}, {8, -1, 2, 0}};
+        int[][] testArray54 = {{-5, 5, 0, 1, -1}};
         System.out.println(sumElementsOfSecondLineArray(testArray51)); // 4
         System.out.println(sumElementsOfSecondLineArray(testArray52)); // -17
-        System.out.println(sumElementsOfSecondLineArray(testArray53));
+        System.out.println(sumElementsOfSecondLineArray(testArray53)); // -1
+        System.out.println(sumElementsOfSecondLineArray(testArray54)); // -1
     }
 
     // 1. Реализовать метод sumOfPositiveElements(..), принимающий в качестве аргумента целочисленный двумерный массив,
@@ -107,7 +109,7 @@ public class HomeworkLesson7 {
     // если второй строки/столбца не существует, то в качестве результата необходимо вернуть -1
     public static int sumElementsOfSecondLineArray(int[][] array) {
 
-        if (array[1].length == 0) {
+        if (array.length < 2 || array[1].length == 0) {
             return -1;
         }
 
