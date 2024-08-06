@@ -5,7 +5,7 @@ public class Dog extends Animal {
 
     // 3. Затраты выносливости:
     // Собаки на 1 метр плавания - 2 ед.
-    public Dog (String name, float speedRun, float speedSwim) {
+    public Dog(String name, float speedRun, float speedSwim) {
         super(name, speedRun, speedSwim);
         swimmingEnduranceCoef = 2;
     }

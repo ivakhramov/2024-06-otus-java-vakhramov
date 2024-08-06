@@ -76,6 +76,7 @@ public class HomeworkLesson7 {
     // и зануляющий его диагональные элементы (можете выбрать любую из диагоналей, или занулить обе).
     // Проверять количество строк и столбцов не требуется, условие “квадратности” нужно, чтобы упростить работу с диагоналями
     public static void doZeroDiagonalElements(int[][] squareArr) {
+
         for (int i = 0; i < squareArr.length; i++) {
             squareArr[i][i] = 0;
             squareArr[i][squareArr.length - 1 - i] = 0;
@@ -117,6 +118,5 @@ public class HomeworkLesson7 {
             sumElementsOfSecondLineArray += array[1][j];
         }
         return sumElementsOfSecondLineArray;
-
     }
 }

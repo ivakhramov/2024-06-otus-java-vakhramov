@@ -9,13 +9,13 @@ public abstract class Animal {
     int endurance;
     int swimmingEnduranceCoef;
 
-    public Animal (String name, float speedRun) {
+    public Animal(String name, float speedRun) {
         this.name = name;
         this.speedRun = speedRun;
         endurance = 100;
     }
 
-    public Animal (String name, float speedRun, float speedSwim) {
+    public Animal(String name, float speedRun, float speedSwim) {
         this.name = name;
         this.speedRun = speedRun;
         this.speedSwim = speedSwim;
@@ -33,8 +33,8 @@ public abstract class Animal {
             return -1;
         }
         endurance -= distance;
-        if(endurance < 0) {
-            System.out.println(name + " пробежал только " +  (distance + endurance) + " метра(ов). После этого у него появилось состояние усталости, и он остановился\n");
+        if (endurance < 0) {
+            System.out.println(name + " пробежал только " + (distance + endurance) + " метра(ов). После этого у него появилось состояние усталости, и он остановился\n");
             endurance = 0;
             return -1;
         }

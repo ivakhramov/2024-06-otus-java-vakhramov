@@ -3,7 +3,7 @@ package ru.ivakhramov.java.basic.homeworks.lesson11.animals;
 // 1. Создать классы Cat, Dog и Horse с наследованием от класса Animal
 public class Cat extends Animal {
 
-    public Cat (String name, float speedRun) {
+    public Cat(String name, float speedRun) {
         super(name, speedRun);
     }
 
