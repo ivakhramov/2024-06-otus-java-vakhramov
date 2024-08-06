@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6df17b42-cf69-429e-9ec2-77af3dc7fc81" name="Changes" comment="Фикс - исправление замечаний в PR №2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson9/Box.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson9/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson9/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6df17b42-cf69-429e-9ec2-77af3dc7fc81" name="Changes" comment="Фикс - исправление замечаний в PR №3">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson11/animals/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson11/animals/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson11/animals/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson11/animals/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson11/animals/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson11/animals/Dog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson7/HomeworkLesson7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson7/HomeworkLesson7.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -194,7 +193,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721771413577</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Фикс - исправление замечаний в PR №3">
+      <option name="closed" value="true" />
+      <created>1722974851229</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1722974851230</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Фикс - исправление замечаний в PR №3">
+      <option name="closed" value="true" />
+      <created>1722974880317</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1722974880317</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,6 +248,7 @@
     <MESSAGE value="Фикс - убрал лишний комментарий" />
     <MESSAGE value="Фикс - исправление замечаний в PR №1" />
     <MESSAGE value="Домашняя работа к уроку 7 готова" />
-    <option name="LAST_COMMIT_MESSAGE" value="Домашняя работа к уроку 7 готова" />
+    <MESSAGE value="Фикс - исправление замечаний в PR №3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Фикс - исправление замечаний в PR №3" />
   </component>
 </project>
