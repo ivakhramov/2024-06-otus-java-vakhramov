@@ -7,6 +7,7 @@ public abstract class Animal {
     float speedRun;
     float speedSwim;
     int endurance;
+    int swimmingEnduranceCoef;
 
     public Animal (String name, float speedRun) {
         this.name = name;
@@ -45,7 +46,20 @@ public abstract class Animal {
     // Собаки на 1 метр плавания - 2 ед.
     // Лошади на 1 метр плавания тратят 4 единицы
     // Кот плавать не умеет
-    public abstract float swim(int distance);
+    public float swim(int distance) {
+        if (endurance == 0) {
+            System.out.println("У " + name + " состояние усталости, он не может плыть\n");
+            return -1;
+        }
+        endurance -= (distance * swimmingEnduranceCoef);
+        if (endurance < 0) {
+            System.out.println(name + " проплыл только " + (distance + endurance / swimmingEnduranceCoef) + " метра(ов). После этого у него появилось состояние усталости, он перестал плыть, и его вынесло течением на берег\n");
+            endurance = 0;
+            return -1;
+        }
+        System.out.println(name + " проплыл " + distance + " метра(ов) за " + distance / speedSwim + " секунд. Текущая выносливость " + name + " " + endurance + " единиц(ы)\n");
+        return distance / speedSwim;
+    }
 
     // 5. Добавить метод info(), который выводит в консоль состояние животного
     public void info() {
