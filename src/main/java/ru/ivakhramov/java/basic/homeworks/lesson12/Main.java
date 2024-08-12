@@ -19,7 +19,7 @@ public class Main {
         for (int i = 0; i < cats.length; i++) {
             cats[i].info();
             plate.info();
-            cats[i].feed(plate.removeFood(cats[i].getAppetite()));
+            cats[i].feed(plate);
             cats[i].info();
             plate.info();
             System.out.println();

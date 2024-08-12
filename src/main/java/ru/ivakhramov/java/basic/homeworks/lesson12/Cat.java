@@ -7,10 +7,6 @@ public class Cat {
     private int appetite;
     private boolean satiety;
 
-    public int getAppetite() {
-        return appetite;
-    }
-
     // 5. Каждому коту нужно добавить поле сытость (когда создаем котов, они голодны).
     // Если коту удалось покушать (хватило еды), сытость = true.
     public Cat(String name, int appetite) {
@@ -21,11 +17,12 @@ public class Cat {
 
     // 6. Считаем, что если коту мало еды в тарелке, то он её просто не трогает,
     // то есть не может быть наполовину сыт (это сделано для упрощения логики программы).
-    public void feed(boolean isEnoughFood) {
-        if (!isEnoughFood) {
+    public void feed(Plate plate) {
+        if (!plate.removeFood(appetite)) {
             return;
         }
         satiety = true;
+        //plate.removeFood(appetite);
     }
 
     public void info() {
