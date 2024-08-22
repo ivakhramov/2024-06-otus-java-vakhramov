@@ -34,9 +34,9 @@ public class Main {
 
         plate.addFood(-1000);
         plate.info();
-        plate.reduceFood(50);
+        plate.decreaseFood(50);
         plate.info();
-        plate.reduceFood(-1000);
+        plate.decreaseFood(-1000);
         plate.info();
     }
 }

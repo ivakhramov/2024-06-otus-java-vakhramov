@@ -18,7 +18,7 @@ public class Cat {
     // 6. Считаем, что если коту мало еды в тарелке, то он её просто не трогает,
     // то есть не может быть наполовину сыт (это сделано для упрощения логики программы).
     public void feed(Plate plate) {
-        if (!plate.reduceFood(appetite)) {
+        if (!plate.decreaseFood(appetite)) {
             return;
         }
         satiety = true;

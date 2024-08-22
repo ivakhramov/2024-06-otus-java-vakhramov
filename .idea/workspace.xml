@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6df17b42-cf69-429e-9ec2-77af3dc7fc81" name="Changes" comment="Фикс - исправление замечаний к PR №4">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Cat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Plate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Plate.java" afterDir="false" />
@@ -62,24 +61,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.GreetingsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HomeworkLesson3.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HomeworkLesson5.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HomeworkLesson7.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ru.ivakhramov.java.basic.homeworks.lesson12.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#6 on feature/homework-lesson12&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ivan/IdeaProjects/otus_java_basic_homeworks&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.GreetingsApplication.executor": "Run",
+    "Application.HomeworkLesson3.executor": "Run",
+    "Application.HomeworkLesson5.executor": "Run",
+    "Application.HomeworkLesson7.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.ru.ivakhramov.java.basic.homeworks.lesson12.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/homework-lesson12",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/ivan/IdeaProjects/otus_java_basic_homeworks",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "advanced.settings"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.ru.ivakhramov.java.basic.homeworks.lesson12.Main">
     <configuration name="HomeworkLesson3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.ivakhramov.java.basic.homeworks.lesson3.HomeworkLesson3" />

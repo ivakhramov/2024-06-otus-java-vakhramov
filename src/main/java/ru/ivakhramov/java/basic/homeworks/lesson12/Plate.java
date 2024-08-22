@@ -29,7 +29,7 @@ public class Plate {
     // при этом после такого уменьшения, в тарелке не может оказаться отрицательное количество еды
     // (если удалось уменьшить еду так, чтобы в тарелке осталось >= 0 кусков еды,
     // то возвращаем true, в противном случае - false).
-    public boolean reduceFood(int food) {
+    public boolean decreaseFood(int food) {
         if (food <= 0 || this.food - food < 0) {
             return false;
         }
