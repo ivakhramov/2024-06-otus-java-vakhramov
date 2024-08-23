@@ -1,6 +1,6 @@
 package ru.ivakhramov.java.basic.homeworks.lesson13.transport;
 
-import ru.ivakhramov.java.basic.homeworks.lesson13.terrain.Terrain;
+import ru.ivakhramov.java.basic.homeworks.lesson13.Terrain;
 
 // 2. Реализовать классы Машина, Лошадь, Велосипед, Вездеход
 public class Car implements Transport {
@@ -28,10 +28,11 @@ public class Car implements Transport {
     // 3. Каждый из классов должен предоставлять возможность перемещаться на определенное расстояние с указанием типа местности
     // 7. При перемещении Машина и Вездеход тратят бензин, который у них ограничен.
     // При выполнении действия результат должен быть отпечатан в консоль
+    // 8. У каждого вида транспорта есть местности по которым он не может перемещаться: машина - густой лес и болото
     // 9. При попытке переместиться должен быть возвращен результат true/false - удалось ли выполнить действие
     @Override
     public boolean canMove(double energy, double distance, Terrain terrain) {
-        if (!terrain.canMove(this)) {
+        if (terrain.getType().equals("Болото") || terrain.getType().equals("Густой лес")) {
             System.out.println(type + " не может перемещаться по " + terrain.getType());
             return false;
         }

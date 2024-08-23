@@ -1,6 +1,6 @@
 package ru.ivakhramov.java.basic.homeworks.lesson13.transport;
 
-import ru.ivakhramov.java.basic.homeworks.lesson13.terrain.Terrain;
+import ru.ivakhramov.java.basic.homeworks.lesson13.Terrain;
 
 public interface Transport {
 

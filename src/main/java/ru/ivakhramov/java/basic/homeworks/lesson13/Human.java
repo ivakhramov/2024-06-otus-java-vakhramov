@@ -1,6 +1,5 @@
 package ru.ivakhramov.java.basic.homeworks.lesson13;
 
-import ru.ivakhramov.java.basic.homeworks.lesson13.terrain.Terrain;
 import ru.ivakhramov.java.basic.homeworks.lesson13.transport.Transport;
 
 // 1. Создать класс Человек с полями name (имя) и currentTransport (текущий транспорт)
