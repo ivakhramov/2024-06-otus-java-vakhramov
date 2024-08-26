@@ -30,7 +30,7 @@ public class Horse implements Transport {
     // 9. При попытке переместиться должен быть возвращен результат true/false - удалось ли выполнить действие
     @Override
     public boolean canMove(double energy, double distance, Terrain terrain) {
-        if (terrain.getType().equals("Болото")) {
+        if (terrain == Terrain.SWAMP) {
             System.out.println(type + " не может перемещаться по " + terrain.getType());
             return false;
         }
