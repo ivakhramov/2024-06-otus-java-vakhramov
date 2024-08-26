@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6df17b42-cf69-429e-9ec2-77af3dc7fc81" name="Changes" comment="Фикс - исправление замечаний в PR №3">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson11/animals/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson11/animals/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson11/animals/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson11/animals/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson11/animals/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson11/animals/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson7/HomeworkLesson7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson7/HomeworkLesson7.java" afterDir="false" />
+    <list default="true" id="6df17b42-cf69-429e-9ec2-77af3dc7fc81" name="Changes" comment="Фикс - исправление замечаний к PR №4">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Plate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Plate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +24,34 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="feature/homework-lesson11" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ivakhramov&quot;
+  }
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMWI7hs53wgMm&quot;,
+        &quot;number&quot;: 6
+      },
+      &quot;lastSeen&quot;: 1723235970399
+    }
+  ]
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ivakhramov/otus_java_basic_homeworks.git&quot;,
+    &quot;accountId&quot;: &quot;ae54e809-ffa3-4ef9-8b9f-b6fc02583498&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -39,33 +61,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.GreetingsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HomeworkLesson3.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HomeworkLesson5.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HomeworkLesson7.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ivan/IdeaProjects/otus_java_basic_homeworks&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.GreetingsApplication.executor": "Run",
+    "Application.HomeworkLesson3.executor": "Run",
+    "Application.HomeworkLesson5.executor": "Run",
+    "Application.HomeworkLesson7.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.ru.ivakhramov.java.basic.homeworks.lesson12.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/homework-lesson12",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/ivan/IdeaProjects/otus_java_basic_homeworks",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "advanced.settings"
   }
-}</component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="GreetingsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.ivakhramov.java.basic.homeworks.GreetingsApplication" />
-      <module name="otus_java_basic_homeworks" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.ivakhramov.java.basic.homeworks.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+}]]></component>
+  <component name="RunManager" selected="Application.ru.ivakhramov.java.basic.homeworks.lesson12.Main">
     <configuration name="HomeworkLesson3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.ivakhramov.java.basic.homeworks.lesson3.HomeworkLesson3" />
       <module name="otus_java_basic_homeworks" />
@@ -118,13 +132,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ru.ivakhramov.java.basic.homeworks.lesson12.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.ivakhramov.java.basic.homeworks.lesson12.Main" />
+      <module name="otus_java_basic_homeworks" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.ivakhramov.java.basic.homeworks.lesson12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ru.ivakhramov.java.basic.homeworks.lesson12.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.HomeworkLesson7" />
         <item itemvalue="Application.HomeworkLesson5" />
         <item itemvalue="Application.HomeworkLesson3" />
-        <item itemvalue="Application.GreetingsApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -193,23 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721771413577</updated>
     </task>
-    <task id="LOCAL-00008" summary="Фикс - исправление замечаний в PR №3">
+    <task id="LOCAL-00008" summary="Домашняя работа к уроку 12 готова">
       <option name="closed" value="true" />
-      <created>1722974851229</created>
+      <created>1723063336156</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1722974851230</updated>
+      <updated>1723063336156</updated>
     </task>
-    <task id="LOCAL-00009" summary="Фикс - исправление замечаний в PR №3">
-      <option name="closed" value="true" />
-      <created>1722974880317</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1722974880317</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +267,8 @@
     <MESSAGE value="Фикс - убрал лишний комментарий" />
     <MESSAGE value="Фикс - исправление замечаний в PR №1" />
     <MESSAGE value="Домашняя работа к уроку 7 готова" />
-    <MESSAGE value="Фикс - исправление замечаний в PR №3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Фикс - исправление замечаний в PR №3" />
+    <MESSAGE value="Домашняя работа к уроку 12 готова" />
+    <MESSAGE value="Фикс - исправление замечаний к PR №4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Фикс - исправление замечаний к PR №4" />
   </component>
 </project>
