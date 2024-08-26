@@ -4,23 +4,37 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String[][] stringsForTest1 = {{"1", "2", "3", "4"},
-                                      {"1", "2", "3", "4"},
-                                      {"1", "2", "3", "4"},
-                                      {"1", "2", "3", "4"}};
-        String[][] stringsForTest2 = {{"1", "2", "3", "4"},
-                                      {"1", "2", "3", "4"},
-                                      {"1", "2", "3", "4"},
-                                      {"1", "2", "3", "4"},
-                                      {"1", "2", "3", "4"}};
-        String[][] stringsForTest3 = {{"1", "2", "3", "4"},
-                                      {"1", "2", "3", "4"},
-                                      {"1", "2", "3", "4", "5", "6"},
-                                      {"1", "2", "3", "4", "5"}};
-        String[][] stringsForTest4 = {{"1", "2", "3", "4"},
-                                      {"1", "2", "3", "4"},
-                                      {"1", "два", "три", "4"},
-                                      {"1", "2", "3", "4"}};
+        String[][] stringsForTest1 = {
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"}
+        };
+        String[][] stringsForTest2 = {
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"}
+        };
+        String[][] stringsForTest3 = {
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4", "5", "6"},
+                {"1", "2", "3", "4", "5"}
+        };
+        String[][] stringsForTest4 = {
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+                {"1", "2", "3"},
+                {"1", "2", "3", "4"}
+        };
+        String[][] stringsForTest5 = {
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+                {"1", "два", "три", "4"},
+                {"1", "2", "3", "4"}
+        };
 
         // 3. В методе main() необходимо вызвать полученный метод,
         // обработать возможные исключения AppArraySizeException и AppArrayDataException и вывести результат расчета
@@ -45,21 +59,24 @@ public class Main {
         } catch (AppArraySizeException | AppArrayDataException exception) {
             System.out.println(exception.getMessage());
         }
+        try {
+            System.out.println("Сумма элементов массива равна " + sumArray(stringsForTest5));
+        } catch (AppArraySizeException | AppArrayDataException exception) {
+            System.out.println(exception.getMessage());
+        }
     }
 
     // 1. Реализуйте метод, аргументом которого является двумерный строковый массив размером 4х4.
     // Если передан массив другого размера необходимо бросить исключение AppArraySizeException.
     public static int sumArray(String[][] strings) {
 
-        int dimensionX = strings.length;
-        int dimensionY = 0;
-        for (int i = 0; strings.length > i; i++) {
-            if (dimensionY < strings[i].length) {
-                dimensionY = strings[i].length;
-            }
-        }
-        if (dimensionX != 4 || dimensionY != 4) {
+        if (strings.length != 4) {
             throw new AppArraySizeException("Размерность массива отличается от 4 х 4");
+        }
+        for (int i = 0; strings.length > i; i++) {
+            if (strings[i].length != 4) {
+                throw new AppArraySizeException("Размерность массива отличается от 4 х 4");
+            }
         }
 
         // 2. Метод должен обойти все элементы массива, преобразовать в int и просуммировать.
