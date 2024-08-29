@@ -2,6 +2,7 @@ package ru.ivakhramov.java.basic.homeworks.lesson15;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class HomeworkLesson15Main {
 
@@ -10,18 +11,18 @@ public class HomeworkLesson15Main {
         System.out.println(generateRangeNum(3, 7));                                           // [3, 4, 5, 6, 7]
         System.out.println(generateRangeNum(7, 3));                                           // []
 
-        ArrayList<Integer> testList1 = new ArrayList<>(Arrays.asList(0, 5, 6, -3, 2, 7));
+        List<Integer> testList1 = new ArrayList<>(Arrays.asList(0, 5, 6, -3, 2, 7));
         System.out.println(sumNumsGreaterFive(testList1));                                    // 13
 
-        ArrayList<Integer> testList2 = new ArrayList<>(Arrays.asList(0, 5, 6, -3, 2, 7));
+        List<Integer> testList2 = new ArrayList<>(Arrays.asList(0, 5, 6, -3, 2, 7));
         overwriteList(5, testList2);
         System.out.println(testList2);                                                        // [5, 5, 5, 5, 5, 5]
 
-        ArrayList<Integer> testList3 = new ArrayList<>(Arrays.asList(0, 5, 6, -3, 2, 7));
+        List<Integer> testList3 = new ArrayList<>(Arrays.asList(0, 5, 6, -3, 2, 7));
         increaseNumsListByDelta(5, testList3);
         System.out.println(testList3);                                                        // [5, 10, 11, 2, 7, 12]
 
-        ArrayList<Employee> testList4 = new ArrayList<>(Arrays.asList(
+        List<Employee> testList4 = new ArrayList<>(Arrays.asList(
                 new Employee("Иван", 33),
                 new Employee("Василий", 27),
                 new Employee("Петр", 19),
@@ -31,22 +32,19 @@ public class HomeworkLesson15Main {
 
         System.out.println(getEmployeesMoreMinAge(testList4, 30));                     // [[Иван, 33], [Алексей, 74]]
 
-        checkMinAverageAgeEmployees(testList4, 38f);
-        checkMinAverageAgeEmployees(testList4, 38.25f);
-        checkMinAverageAgeEmployees(testList4, 39f);
+        System.out.println(checkMinAverageAgeEmployees(testList4, 38f));         // true
+        System.out.println(checkMinAverageAgeEmployees(testList4, 38.25f));      // false
+        System.out.println(checkMinAverageAgeEmployees(testList4, 39f));         // false
 
-        System.out.println(getYoungestEmployee(testList4));                                     // [Петр, 19]
+        System.out.println(getYoungestEmployee(testList4));                                   // [Петр, 19]
     }
 
     // 1. Реализуйте метод, принимающий в качестве аргументов числа min и max,
     // и возвращающий ArrayList с набором последовательных значений в указанном диапазоне (min и max включительно, шаг - 1)
-    public static ArrayList<Integer> generateRangeNum(int min, int max) {
+    public static List<Integer> generateRangeNum(int min, int max) {
 
-        ArrayList<Integer> rangeNums = new ArrayList<>();
+        List<Integer> rangeNums = new ArrayList<>();
 
-        if (min > max) {
-            return rangeNums;
-        }
 
         for (int i = min; i <= max; i++) {
             rangeNums.add(i);
@@ -56,12 +54,12 @@ public class HomeworkLesson15Main {
 
     // 2. Реализуйте метод, принимающий в качестве аргумента список целых чисел,
     // суммирующий все элементы, значение которых больше 5, и возвращающий сумму
-    public static int sumNumsGreaterFive(ArrayList<Integer> list) {
+    public static int sumNumsGreaterFive(List<Integer> list) {
 
         int sumNums = 0;
 
         if (list == null || list.isEmpty()) {
-            return sumNums;
+            throw new IllegalArgumentException("Лист не должен быть пустым");
         }
 
         for (int i = 0; i < list.size(); i++) {
@@ -74,11 +72,10 @@ public class HomeworkLesson15Main {
 
     // 3. Реализуйте метод, принимающий в качестве аргументов целое число и ссылку на список,
     // метод должен переписать каждую заполненную ячейку списка указанным числом
-    public static void overwriteList(int number, ArrayList<Integer> list) {
+    public static void overwriteList(int number, List<Integer> list) {
 
         if (list == null || list.isEmpty()) {
-            System.out.println("Список пуст");
-            return;
+            throw new IllegalArgumentException("Лист не должен быть пустым");
         }
 
         for (int i = 0; i < list.size(); i++) {
@@ -88,11 +85,10 @@ public class HomeworkLesson15Main {
 
     // 4. Реализуйте метод, принимающий в качестве аргументов целое число и ссылку на список,
     // увеличивающий каждый элемент списка на указанное число
-    public static void increaseNumsListByDelta(int delta, ArrayList<Integer> list) {
+    public static void increaseNumsListByDelta(int delta, List<Integer> list) {
 
         if (list == null || list.isEmpty()) {
-            System.out.println("Список пуст");
-            return;
+            throw new IllegalArgumentException("Лист не должен быть пустым");
         }
 
         for (int i = 0; i < list.size(); i++) {
@@ -102,12 +98,12 @@ public class HomeworkLesson15Main {
 
     // 6. Реализуйте метод, принимающий в качестве аргумента список сотрудников,
     // и возвращающий список их имен
-    public static ArrayList<String> getNames(ArrayList<Employee> list) {
+    public static List<String> getNames(List<Employee> list) {
 
-        ArrayList<String> listNames = new ArrayList<>();
+        List<String> listNames = new ArrayList<>();
 
         if (list == null || list.isEmpty()) {
-            return listNames;
+            throw new IllegalArgumentException("Лист не должен быть пустым");
         }
 
         for (int i = 0; i < list.size(); i++) {
@@ -118,12 +114,12 @@ public class HomeworkLesson15Main {
 
     // 7. Реализуйте метод, принимающий в качестве аргумента список сотрудников и минимальный возраст,
     // и возвращающий список сотрудников, возраст которых больше либо равен указанному аргументу
-    public static ArrayList<Employee> getEmployeesMoreMinAge(ArrayList<Employee> list, int minAge) {
+    public static List<Employee> getEmployeesMoreMinAge(List<Employee> list, int minAge) {
 
-        ArrayList<Employee> employeesMoreMinAge = new ArrayList<>();
+        List<Employee> employeesMoreMinAge = new ArrayList<>();
 
         if (list == null || list.isEmpty()) {
-            return employeesMoreMinAge;
+            throw new IllegalArgumentException("Лист не должен быть пустым");
         }
 
         for (int i = 0; i < list.size(); i++) {
@@ -136,11 +132,10 @@ public class HomeworkLesson15Main {
 
     // 8. Реализуйте метод, принимающий в качестве аргумента список сотрудников и минимальный средний возраст,
     // и проверяющий, что средний возраст сотрудников превышает указанный аргумент
-    public static void checkMinAverageAgeEmployees(ArrayList<Employee> list, float minAverageAge) {
+    public static boolean checkMinAverageAgeEmployees(List<Employee> list, float minAverageAge) {
 
         if (list == null || list.isEmpty()) {
-            System.out.println("Список пуст");
-            return;
+            throw new IllegalArgumentException("Лист не должен быть пустым");
         }
 
         int sumMinAgeEmployees = 0;
@@ -150,26 +145,18 @@ public class HomeworkLesson15Main {
         float minAverageAgeEmployees = (float) sumMinAgeEmployees / list.size();
 
         if (minAverageAgeEmployees > minAverageAge) {
-            System.out.println("Cредний возраст сотрудников превышает минимальный средний возраст " + minAverageAge + " лет, и составляет " + minAverageAgeEmployees + " лет");
-            return;
-        }
-        if (minAverageAgeEmployees < minAverageAge) {
-            System.out.println("Cредний возраст сотрудников меньше минимального среднего возраста " + minAverageAge + " лет, и составляет " + minAverageAgeEmployees + " лет");
-            return;
-        }
-        if (minAverageAgeEmployees == minAverageAge) {
-            System.out.println("Cредний возраст сотрудников равен минимальному среднему возрасту " + minAverageAge + " лет, и составляет " + minAverageAgeEmployees + " лет");
-            return;
+            return true;
+        } else {
+            return false;
         }
     }
 
     // 9. Реализуйте метод, принимающий в качестве аргумента список сотрудников,
     // и возвращающий ссылку на самого молодого сотрудника
-    public static Employee getYoungestEmployee(ArrayList<Employee> list) {
+    public static Employee getYoungestEmployee(List<Employee> list) {
 
         if (list == null || list.isEmpty()) {
-            System.out.println("Список пуст");
-            return null;
+            throw new IllegalArgumentException("Лист не должен быть пустым");
         }
 
         Employee youngestEmployee = list.get(0);
