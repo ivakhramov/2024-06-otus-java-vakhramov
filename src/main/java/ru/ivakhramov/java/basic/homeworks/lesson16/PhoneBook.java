@@ -33,7 +33,7 @@ public class PhoneBook {
     // 3. Метод find() выполнять поиск номер(-а, -ов) телефона по имени
     public List<String> find(String name) {
 
-        return phoneBook.get(name);
+        return phoneBook.getOrDefault(name, new ArrayList<>());
     }
 
     // 5. Метод containsPhoneNumber должен проверять наличие телефона в справочнике

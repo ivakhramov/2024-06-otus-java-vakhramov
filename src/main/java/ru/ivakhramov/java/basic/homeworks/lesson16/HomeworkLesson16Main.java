@@ -20,6 +20,4 @@ public class HomeworkLesson16Main {
         System.out.println(phoneBook.containsPhoneNumber("+7 911 111-11-14")); // true
         System.out.println(phoneBook.containsPhoneNumber("+7 911 111-11-15")); // false
     }
-
-
 }
