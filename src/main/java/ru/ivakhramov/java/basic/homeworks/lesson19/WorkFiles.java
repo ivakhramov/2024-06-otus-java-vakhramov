@@ -13,7 +13,9 @@ public class WorkFiles {
         this.extension = extension;
     }
 
-    // 1. При старте приложения, в консоль выводится список текстовых файлов из корневого каталога проекта
+    /**
+     * 1. При старте приложения, в консоль выводится список текстовых файлов из корневого каталога проекта
+     */
     public File[] GettingListFiles(String path, String extension) {
 
         FilenameFilter extensionFileFilter = new FilenameFilter() {
@@ -28,7 +30,7 @@ public class WorkFiles {
         File[] files = dir.listFiles(extensionFileFilter);
 
         if (dir.isDirectory() && files != null && files.length > 0) {
-            for (File item : dir.listFiles(extensionFileFilter)) {
+            for (File item : files) {
                 if (item.isFile()) {
                     System.out.println(item.getName());
                 }
@@ -40,7 +42,9 @@ public class WorkFiles {
         return files;
     }
 
-    // 3. Содержимое файла выводится в консоль
+    /**
+     * 3. Содержимое файла выводится в консоль
+     */
     public void CustomFileReader(String fileName, String path) {
 
         if (fileName == null) {
@@ -54,12 +58,13 @@ public class WorkFiles {
                 System.out.println(str);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Ошибка при работе с файлом" + e.getMessage());
         }
     }
 
-    // 4. Затем любую введенную пользователем строку необходимо записывать в указанный файл
-
+    /**
+     * 4. Затем любую введенную пользователем строку необходимо записывать в указанный файл
+     */
     public void NewLineWriter(String fileName, String path) {
 
         if (fileName == null) {
@@ -74,7 +79,7 @@ public class WorkFiles {
             out.newLine();
             out.write(customString);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Ошибка при работе с файлом" + e.getMessage());
         }
     }
 }

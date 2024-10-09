@@ -5,7 +5,9 @@ import java.util.Scanner;
 
 public class UserChoice {
 
-    // 2. Далее программа запрашивает имя файла, с которым хочет работать пользователь
+    /**
+     * 2. Далее программа запрашивает имя файла, с которым хочет работать пользователь
+     */
     public static String SelectFile(File[] files) {
 
         if (files == null || files.length == 0) {
