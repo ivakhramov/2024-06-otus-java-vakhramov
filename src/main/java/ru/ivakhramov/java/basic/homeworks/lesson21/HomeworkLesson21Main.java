@@ -19,7 +19,7 @@ public class HomeworkLesson21Main {
 
     public static void main(String[] args) {
 
-        int ARRAY_SIZE = 100_000_000;
+        final int ARRAY_SIZE = 100_000_000;
 
         long implementation1 = runTimeFillingArray(ARRAY_SIZE, 1);
         long implementation2 = runTimeFillingArray(ARRAY_SIZE, 4);
@@ -38,12 +38,9 @@ public class HomeworkLesson21Main {
         Thread[] threads = new Thread[numberOfThreads];
         for (int i = 0; i < numberOfThreads; i++) {
             int index = i;
-            threads[i] = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    fillingArray(array, (arraySize / numberOfThreads) * index, (arraySize / numberOfThreads) * (index + 1));
-                }
-            });
+            threads[i] = new Thread(() ->
+                    fillingArray(array, (arraySize / numberOfThreads) * index, (arraySize / numberOfThreads) * (index + 1))
+            );
         }
 
         for (int i = 0; i < numberOfThreads; i++) {
@@ -54,7 +51,7 @@ public class HomeworkLesson21Main {
             try {
                 threads[i].join();
             } catch (InterruptedException e) {
-                System.out.println("Ошибка: " + e.getMessage());
+                e.printStackTrace();
             }
         }
 
