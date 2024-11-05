@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6df17b42-cf69-429e-9ec2-77af3dc7fc81" name="Changes" comment="Фикс - исправление замечаний к PR №4">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Plate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson12/Plate.java" afterDir="false" />
+    <list default="true" id="6df17b42-cf69-429e-9ec2-77af3dc7fc81" name="Changes" comment="Фикс - исправление замечаний к PR №13">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson24/DDL.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson24/DML.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson24/HomeworkLesson24.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework-lesson24.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -24,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/homework-lesson11" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,6 +56,9 @@
     &quot;accountId&quot;: &quot;ae54e809-ffa3-4ef9-8b9f-b6fc02583498&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -63,55 +70,56 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ClientCalc.executor": "Run",
     "Application.GreetingsApplication.executor": "Run",
+    "Application.HomeworkLesson16Main.executor": "Run",
+    "Application.HomeworkLesson17Main.executor": "Run",
+    "Application.HomeworkLesson19Main.executor": "Run",
+    "Application.HomeworkLesson21Main.executor": "Run",
     "Application.HomeworkLesson3.executor": "Run",
     "Application.HomeworkLesson5.executor": "Run",
     "Application.HomeworkLesson7.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.ServerCalc.executor": "Run",
     "Application.ru.ivakhramov.java.basic.homeworks.lesson12.Main.executor": "Run",
+    "Database Script.DDL.sql.executor": "Run",
+    "Database Script.DML.sql.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/homework-lesson12",
+    "git-widget-placeholder": "feature/homework-lesson24",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/ivan/IdeaProjects/otus_java_basic_homeworks",
+    "last_opened_file_path": "/home/ivakhramov/IdeaProjects/otus_java_basic_homeworks",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "advanced.settings"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "RunConfigurationTargetLRU": [
+      "e8eac189-f61e-4c3c-b8de-593be23d39d2/database/\"postgres\"/schema/\"public\"",
+      "e8eac189-f61e-4c3c-b8de-593be23d39d2/database/\"otus_java_basic_homework_lesson24\"",
+      "e8eac189-f61e-4c3c-b8de-593be23d39d2/database/\"otus_java_basic_homework_lesson24\"/schema/\"public\""
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "PostgreSQL"
+    ]
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ru.ivakhramov.java.basic.homeworks.lesson12.Main">
-    <configuration name="HomeworkLesson3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.ivakhramov.java.basic.homeworks.lesson3.HomeworkLesson3" />
+  <component name="RunManager" selected="Database Script.DML.sql">
+    <configuration name="HomeworkLesson17Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.ivakhramov.java.basic.homeworks.lesson17.HomeworkLesson17Main" />
       <module name="otus_java_basic_homeworks" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.ivakhramov.java.basic.homeworks.lesson3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomeworkLesson5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.ivakhramov.java.basic.homeworks.lesson5.HomeworkLesson5" />
-      <module name="otus_java_basic_homeworks" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.ivakhramov.java.basic.homeworks.lesson5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomeworkLesson7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.ivakhramov.java.basic.homeworks.lesson7.HomeworkLesson7" />
-      <module name="otus_java_basic_homeworks" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.ivakhramov.java.basic.homeworks.lesson7.*" />
+          <option name="PATTERN" value="ru.ivakhramov.java.basic.homeworks.lesson17.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,15 +153,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DDL.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson24/DDL.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="e8eac189-f61e-4c3c-b8de-593be23d39d2" namespace="database/&quot;otus_java_basic_homework_lesson24&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DML.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/main/java/ru/ivakhramov/java/basic/homeworks/lesson24/DML.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="e8eac189-f61e-4c3c-b8de-593be23d39d2" namespace="database/&quot;otus_java_basic_homework_lesson24&quot;/schema/&quot;public&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.HomeworkLesson17Main" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.ru.ivakhramov.java.basic.homeworks.lesson12.Main" />
+      <item itemvalue="Database Script.DDL.sql" />
+      <item itemvalue="Database Script.DML.sql" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.DML.sql" />
+        <item itemvalue="Database Script.DDL.sql" />
         <item itemvalue="Application.ru.ivakhramov.java.basic.homeworks.lesson12.Main" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.HomeworkLesson7" />
-        <item itemvalue="Application.HomeworkLesson5" />
-        <item itemvalue="Application.HomeworkLesson3" />
+        <item itemvalue="Application.HomeworkLesson17Main" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -163,6 +198,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720959060741</updated>
+      <workItem from="1727206936771" duration="172000" />
+      <workItem from="1727207230269" duration="2599000" />
+      <workItem from="1727618513790" duration="5476000" />
+      <workItem from="1727722357422" duration="12581000" />
+      <workItem from="1727888131959" duration="37000" />
+      <workItem from="1727888175189" duration="2530000" />
+      <workItem from="1727958036129" duration="9000" />
+      <workItem from="1728201563275" duration="8798000" />
+      <workItem from="1728222017572" duration="6169000" />
+      <workItem from="1728298850939" duration="1470000" />
+      <workItem from="1728310687124" duration="1662000" />
+      <workItem from="1728333855386" duration="8618000" />
+      <workItem from="1728380504579" duration="11459000" />
+      <workItem from="1728406615830" duration="848000" />
+      <workItem from="1728458681572" duration="14409000" />
+      <workItem from="1728543979599" duration="4212000" />
+      <workItem from="1728581691599" duration="2090000" />
+      <workItem from="1728666650436" duration="1865000" />
+      <workItem from="1728840766655" duration="11668000" />
+      <workItem from="1729196446826" duration="2416000" />
+      <workItem from="1729533595346" duration="167000" />
+      <workItem from="1729533921059" duration="11000" />
+      <workItem from="1730760881492" duration="25000" />
+      <workItem from="1730760911895" duration="1392000" />
+      <workItem from="1730766093455" duration="6247000" />
+      <workItem from="1730791100646" duration="11023000" />
     </task>
     <task id="LOCAL-00001" summary="Домашняя работа к уроку 3 готова (включая задание *)">
       <option name="closed" value="true" />
@@ -228,8 +289,67 @@
       <option name="project" value="LOCAL" />
       <updated>1723063336156</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Домашняя работа к уроку 17 готова">
+      <option name="closed" value="true" />
+      <created>1727734671556</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1727734671556</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Фикс - исправление замечаний к PR №11">
+      <option name="closed" value="true" />
+      <created>1728202488685</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1728202488686</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Домашняя работа к уроку 19 готова">
+      <option name="closed" value="true" />
+      <created>1728391727188</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1728391727188</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Фикс - исправление замечаний к PR №12">
+      <option name="closed" value="true" />
+      <created>1728504693985</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1728504693985</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Домашняя работа к уроку 20 готова">
+      <option name="closed" value="true" />
+      <created>1729547753748</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1729547753748</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Домашняя работа к уроку 21 готова">
+      <option name="closed" value="true" />
+      <created>1729673570070</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1729673570070</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Фикс - исправление замечаний к PR №13">
+      <option name="closed" value="true" />
+      <created>1729675338431</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1729675338431</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -269,6 +389,27 @@
     <MESSAGE value="Домашняя работа к уроку 7 готова" />
     <MESSAGE value="Домашняя работа к уроку 12 готова" />
     <MESSAGE value="Фикс - исправление замечаний к PR №4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Фикс - исправление замечаний к PR №4" />
+    <MESSAGE value="Домашняя работа к уроку 17 готова" />
+    <MESSAGE value="Фикс - исправление замечаний к PR №11" />
+    <MESSAGE value="Домашняя работа к уроку 19 готова" />
+    <MESSAGE value="Фикс - исправление замечаний к PR №12" />
+    <MESSAGE value="Домашняя работа к уроку 20 готова" />
+    <MESSAGE value="Домашняя работа к уроку 21 готова" />
+    <MESSAGE value="Фикс - исправление замечаний к PR №13" />
+    <option name="LAST_COMMIT_MESSAGE" value="Фикс - исправление замечаний к PR №13" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
