@@ -3,7 +3,6 @@ package ru.ivakhramov.java.basic.homeworks.lesson26;
 public class HomeworkLesson26Main {
 
     public static void main(String[] args) {
-
         Box<Apple> appleBox = new Box<>();
         appleBox.addFruit(new Apple(2.5));
         appleBox.addFruit(new Apple(7.5));
