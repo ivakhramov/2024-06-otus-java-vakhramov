@@ -6,6 +6,10 @@ import java.util.List;
 public class Box<T extends Fruit> {
     private List<T> fruits;
 
+    public List<T> getFruits() {
+        return fruits;
+    }
+
     public Box() {
         this.fruits = new ArrayList<>();
     }
@@ -30,18 +34,7 @@ public class Box<T extends Fruit> {
         return Math.abs(this.weight() - targetBox.weight()) < 0.000001;
     }
 
-    public void pourBoxToBox(Box<T> targetBox) {
-        if (!targetBox.fruits.isEmpty()) {
-            System.out.println("Коробка уже занята. Возьмите другую коробку");
-            return;
-        }
-
-        if(!(targetBox instanceof Box<?> &&
-                (targetBox.fruits.isEmpty() || targetBox.fruits.get(0) instanceof Fruit))) {
-            System.out.println("коробка должна быть для фруктов");
-            return;
-        }
-
+    public void pourBoxToBox(Box<? super T> targetBox) {
         targetBox.fruits.addAll(this.fruits);
         this.fruits.clear();
         System.out.println("Фрукты пересыпаны");
